@@ -1,0 +1,20 @@
+.character-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  padding: 24px;
+  text-decoration: none;
+  justify-content: space-between;
+
+  &-content {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &-info {
+    text-align: left;
+  }
+}
