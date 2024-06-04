@@ -1,27 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { getCharacters } from "../api";
+import React from "react";
+import CharacterList from "../components/CharacterList";
 
 const BASE_CLASS = "list-page";
 
 const ListPage = () => {
-  const [characters, setCharacters] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await getCharacters();
-      setCharacters(data);
-      setLoading(false);
-    };
-
-    fetchData();
-  }, []);
-
-  if (loading) {
-    return <p>Loading...</p>;
-  }
-
-  return <div className={BASE_CLASS}>{characters[0].name.first}</div>;
+  return (
+    <div className={BASE_CLASS}>
+      <CharacterList />
+    </div>
+  );
 };
 
 export default ListPage;
