@@ -2,11 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import { useFavorites } from "../context/FavoritesContext";
-import { ADD_FAVORITE, REMOVE_FAVORITE } from "../config";
+import {
+  ADD_FAVORITE,
+  FAVORITE_BUTTON_TEXT,
+  REMOVE_FAVORITE,
+  UNFAVORITE_BUTTON_TEXT,
+} from "../config";
 
 const BASE_CLASS = "favorite-button";
-const FAVORITE_BUTTON_TEXT = "Favorite";
-const UNFAVORITE_BUTTON_TEXT = "Unfavorite";
 
 const FavoriteButton = ({ characterId }) => {
   const { favorites, dispatch } = useFavorites();
