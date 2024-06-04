@@ -30,7 +30,20 @@ const CharacterCard = ({ character }) => {
 };
 
 CharacterCard.propTypes = {
-  characters: PropTypes.array.isRequired,
+  character: PropTypes.shape({
+    age: PropTypes.number,
+    gender: PropTypes.string,
+    id: PropTypes.number,
+    images: PropTypes.shape({
+      main: PropTypes.string,
+    }),
+    name: PropTypes.shape({
+      first: PropTypes.string,
+      last: PropTypes.string,
+    }),
+    species: PropTypes.string,
+    occupation: PropTypes.string,
+  }),
 };
 
 export default CharacterCard;

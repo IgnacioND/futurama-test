@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import { useFavorites } from "../context/FavoritesContext";
 import { ADD_FAVORITE, REMOVE_FAVORITE } from "../config";
 
@@ -28,6 +30,10 @@ const FavoriteButton = ({ characterId }) => {
       />
     </button>
   );
+};
+
+FavoriteButton.propTypes = {
+  characterId: PropTypes.string,
 };
 
 export default FavoriteButton;

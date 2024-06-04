@@ -1,4 +1,5 @@
 import React, { createContext, useReducer, useContext, useEffect } from "react";
+import PropTypes from "prop-types";
 import { ADD_FAVORITE, FAVORITES_KEY, REMOVE_FAVORITE } from "../config";
 
 const FavoritesContext = createContext();
@@ -29,6 +30,10 @@ export const FavoritesProvider = ({ children }) => {
       {children}
     </FavoritesContext.Provider>
   );
+};
+
+FavoritesProvider.propTypes = {
+  children: PropTypes.node,
 };
 
 export const useFavorites = () => useContext(FavoritesContext);
