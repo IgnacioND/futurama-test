@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
 import CharacterCard from "./CharacterCard";
 import { getCharacters } from "../api";
 
@@ -32,8 +31,6 @@ const CharacterList = () => {
   );
 };
 
-CharacterList.propTypes = {
-  characters: PropTypes.array.isRequired,
-};
+CharacterList.propTypes = {};
 
 export default CharacterList;
