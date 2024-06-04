@@ -1,5 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import FavoriteButton from "./FavoriteButton";
 
 const BASE_CLASS = "character-card";
 
@@ -20,8 +22,15 @@ const CharacterCard = ({ character }) => {
           </div>
         </div>
       </Link>
+      <div className={`${BASE_CLASS}-favorite`}>
+        <FavoriteButton characterId={character.id} />
+      </div>
     </div>
   );
+};
+
+CharacterCard.propTypes = {
+  characters: PropTypes.array.isRequired,
 };
 
 export default CharacterCard;

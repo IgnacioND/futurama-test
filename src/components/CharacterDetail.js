@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getCharacterDetails } from "../api";
+import FavoriteButton from "./FavoriteButton";
 
 const BASE_CLASS = "character-detail";
 
@@ -41,6 +42,9 @@ const CharacterDetail = () => {
             ))}
           </ul>
         </div>
+      </div>
+      <div className={`${BASE_CLASS}-favorite`}>
+        <FavoriteButton characterId={character.id} />
       </div>
     </div>
   );
