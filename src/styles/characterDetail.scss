@@ -1,14 +1,14 @@
 .character-detail {
   display: flex;
-  padding: 24px;
+  padding: $p-m;
   position: sticky;
   top: 0;
   align-self: flex-start;
 
   &-content {
-    display: flex;
-    justify-content: space-between;
     align-items: flex-start;
-    gap: 24px;
+    display: flex;
+    gap: $g-m;
+    justify-content: space-between;
   }
 }

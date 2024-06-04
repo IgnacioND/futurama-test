@@ -1,17 +1,17 @@
 .character-card {
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: $bdrs-m;
+  border: $brd-s solid grey;
   display: flex;
-  padding: 24px;
-  text-decoration: none;
   justify-content: space-between;
+  padding: $p-m;
+  text-decoration: none;
 
   &-content {
-    text-align: center;
+    align-items: center;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    gap: 24px;
+    gap: $g-m;
+    text-align: center;
   }
 
   &-info {
