@@ -1,5 +1,5 @@
 import axios from "axios";
-import { BASE_URL } from "../../../futurama-app-v2/src/config";
+import { BASE_URL } from "../config";
 
 export const getCharacters = async () => {
   const response = await axios.get(`${BASE_URL}/characters`);
